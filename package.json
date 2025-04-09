@@ -1,0 +1,23 @@
+{
+  "name": "@ivetteleonf/eslint-config",
+  "version": "1.1.0",
+  "description": "Shared configurations to Eslint",
+  "main": "index.js",
+  "type": "commonjs",
+  "scripts": {
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "test": "npm run lint"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "peerDependencies": {
+    "@eslint/js": "^9.24.0",
+    "eslint": "^9.24.0",
+    "globals": "^16.0.0"
+  },
+  "dependencies": {
+    "@ivetteleonf/eslint-config": "^1.0.0"
+  }
+}
