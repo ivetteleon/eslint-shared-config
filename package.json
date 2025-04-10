@@ -1,13 +1,14 @@
 {
   "name": "@ivetteleonf/eslint-config",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "Shared configurations to Eslint",
   "main": "index.js",
   "type": "commonjs",
   "scripts": {
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
-    "test": "npm run lint"
+    "test": "npm run lint",
+    "publish": "npm publish"
   },
   "keywords": [],
   "author": "",
