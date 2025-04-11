@@ -1,0 +1,11 @@
+# Development files
+.git
+.gitignore
+.eslintrc.js
+DEVELOPMENT_NOTES.md
+
+# IDE files
+.vscode/
+
+# Environment variables
+.env

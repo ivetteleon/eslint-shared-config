@@ -1,9 +1,8 @@
 const { defineConfig } = require("eslint/config");
-const myconfig = require("./index.js");
+const { javascriptConfig } = require("./index.js");
 
 module.exports = defineConfig([
 	{
-		files: ["**/*.js"],
-		extends: [myconfig],
+		extends: [javascriptConfig]
 	},
 ]);

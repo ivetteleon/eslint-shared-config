@@ -1,98 +1,67 @@
-# eslint-shared-config
+# 🔧 @ivetteleonf/eslint-config
 
-> 🔧 Shared ESLint configurations for JavaScript and TypeScript projects.  
-> Published as an npm package to standardize linting across projects at Entel Digital.
+> Shared ESLint configurations for JavaScript and TypeScript projects.
 
----
-
-## 📦 Package Scope
-
-This package is published with an **npm scope** to ensure clear organization and reusability:
-
-- The `"name"` field in `package.json` should follow the format:  
-  ```
-  @scope/eslint-config
-  ```
-- In this case, the scope is your personal npm (or GitHub) username:  
-  ```
-  @ivetteleon/eslint-config
-  ```
-
-> If migrated to an organization (e.g., `@enteldigital`) in the future, you can update the scope accordingly.
+Centralize and standardize linting rules across multiple codebases.  
+Supports both JavaScript and TypeScript projects.
 
 ---
 
-## 🚀 Publishing the Package
+## 📦 Installation
 
-This guide assumes you already have a base project (like [eslint-shared-config](https://github.com/ivetteleon/eslint-shared-config)) ready to be used as an npm package.
+To use this shared ESLint configuration in your project, follow these steps:
 
-### 1. Log in to npm
-
-```bash
-npm login
-```
-
-Make sure you’re logged in with the correct account on [npmjs.com](https://www.npmjs.com/).
-
-### 2. Set correct `package.json` fields
-
-Ensure the `"name"` field in `package.json` uses the correct scope:
-
-```json
-"name": "@ivetteleon/eslint-config"
-```
-
-### 3. Publish publicly
-
-Scoped packages are private by default, so you need to publish explicitly as public:
+1. Install the package as a development dependency:
 
 ```bash
-npm publish --access public
+npm install -D @ivetteleonf/eslint-config
 ```
 
----
+2. Install the required peer dependencies based on your project type:
 
-## 🔁 Updating the Package
 
-To release updates to the package:
+### 🟢 For JavaScript Projects
 
-1. Manually increment the version in `package.json`, for example:
-
-```json
-"version": "1.0.1"
-```
-
-2. Publish again:
+Install the following peer dependencies:
 
 ```bash
-npm publish
+npm install -D eslint @eslint/js globals
 ```
 
----
+### 🔵 For TypeScript Projects
 
-## 📚 Using the Config in Projects
-
-To use this shared ESLint configuration in a project:
-
-1. Install the package:
+Install the following peer dependencies:
 
 ```bash
-npm install --save-dev @ivetteleon/eslint-config
+npm install -D eslint @eslint/js globals \
+  typescript \
+  @typescript-eslint/eslint-plugin \
+  @typescript-eslint/parser
 ```
 
-2. Extend it in your ESLint config file:
+### 3. Configure ESLint
 
-```js
+Extend the shared configuration in your Eslint configuration file:
+
+```javascript
 // .eslintrc.js
-module.exports = {
-  extends: ['@ivetteleon/eslint-config'],
-};
+import { javascriptConfig } from "@ivetteleonf/eslint-config";
+
+export default javascriptConfig;
 ```
 
-> You can also create variations like `@ivetteleon/eslint-config-react` or `...-node` in the future if needed.
+```typescript
+// .eslintrc.ts
+import { typesConfig } from "@ivetteleonf/eslint-config";
 
----
+export default typesConfig;
+```
 
-## 📝 License
+## Features
 
-MIT © 2025 Entel Digital
+...
+
+
+## License
+
+...
