@@ -7,7 +7,7 @@ Supports both JavaScript and TypeScript projects.
 
 ---
 
-## 📦 Installation
+## 📦 Usage
 
 To use this shared ESLint configuration in your project, follow these steps:
 
