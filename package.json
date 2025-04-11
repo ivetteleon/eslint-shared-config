@@ -1,0 +1,29 @@
+{
+  "name": "@ivetteleonf/eslint-config",
+  "version": "1.4.1",
+  "description": "Shared ESLint configurations for JavaScript and TypeScript projects",
+  "author": "Ivette León ivetteleonfaune@gmail.com",
+  "main": "index.js",
+  "type": "commonjs", 
+  "engines": {
+    "node": ">=16.0.0"
+  },
+  "scripts": {
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "test": "npm run lint",
+    "publish": "npm publish"
+  },
+  "keywords": [],
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ivetteleon/eslint-shared-config"
+  },
+  "peerDependencies": {
+    "node": ">=16.0.0",
+    "eslint": ">=9",
+    "@eslint/js": "^9.24.0",
+    "globals": "^16.0.0"
+  }
+}
