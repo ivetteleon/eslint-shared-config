@@ -15,7 +15,7 @@ module.exports = defineConfig([
     },
     extends: ["js/recommended"],
     rules: {
-      semi: ["error", "always"],
+      semi: ["error", "never"],
     },
   },
 ]);
